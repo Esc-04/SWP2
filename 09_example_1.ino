@@ -113,13 +113,6 @@ float USS_measure(int TRIG, int ECHO)
   
   return pulseIn(ECHO, HIGH, TIMEOUT) * SCALE; // unit: mm
 
-  // Pulse duration to distance conversion example (target distance = 17.3m)
-  // - pulseIn(ECHO, HIGH, timeout) returns microseconds (음파의 왕복 시간)
-  // - 편도 거리 = (pulseIn() / 1,000,000) * SND_VEL / 2 (미터 단위)
-  //   mm 단위로 하려면 * 1,000이 필요 ==>  SCALE = 0.001 * 0.5 * SND_VEL
-  //
-  // - 예, pusseIn()이 100,000 이면 (= 0.1초, 왕복 거리 34.6m)
-  //        = 100,000 micro*sec * 0.001 milli/micro * 0.5 * 346 meter/sec
-  //        = 100,000 * 0.001 * 0.5 * 346
-  //        = 17,300 mm  ==> 17.3m
+
 }
+
